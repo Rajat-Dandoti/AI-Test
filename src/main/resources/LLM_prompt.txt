@@ -1,0 +1,22 @@
+Analyze the provided 'Processed HTML' and 'Failed Locator' content to identify the best locator options based on the failed locator. Your goal is to find the most accurate and relevant locators that could replace the failed one.
+
+Please consider the following criteria for scoring the locators:
+- **Proximity**: How close the locator is to the element associated with the failed locator.
+- **Specificity**: How uniquely the locator identifies the desired element.
+- **Robustness**: The likelihood that the locator will remain valid over time.
+
+Locator Content: %s
+HTML Page Source: %s
+
+Here are the templates to guide your locator generation:
+- //<tagname>[@<attribute>='<value>']
+- //<tagname>[text()='<value>']
+
+Additionally, please provide a brief explanation for each locator, highlighting why it was chosen and how it relates to the failed locator.
+
+Response format example is given below - (ranked by score, from highest to lowest):
+[
+    {"locator": "//div[@id='username field']", "score": 0.9, "explanation": "This locator is closely related to the failed locator and specifically targets the required field."},
+    {"locator": "//input[@name='Username']", "score": 0.85, "explanation": "This input field is relevant and has a unique name attribute that closely matches the expected value."},
+    ...
+]

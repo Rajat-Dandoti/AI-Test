@@ -1,0 +1,5 @@
+submitButton=//input[@name='btnK']
+searchBox=//textarea[@name='q']
+storeLink=//a[@class='gb_A' and @aria-label='Google apps']
+selenium_sr=//h3[@class='LC20lb MBeuO DKV0Md'][text()='Selenium']
+selenium_appliTools=//img[@alt='Applitools']
